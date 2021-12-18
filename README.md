@@ -45,5 +45,5 @@ cd Deep_MVS_Tutorial/PatchmatchNet
 sh custom_para.sh
 ```
 
-If anything goes wrong, check the packages or rise up a issue, we will be happy to answer your questions.
+If anything goes wrong, check the packages or rise a new issue, we will be happy to answer your questions.
 
