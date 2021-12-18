@@ -29,5 +29,21 @@ Different to Mono-Depth Estimating task, the methods in MVS project focus on the
 
 PatchmatchNet is the only method that we made some changes to the code and it's easy to understand the pipeline, we would like to share some detail about this network. Patchmatch is a traditional method, you can learn more about it by view [Patchmatch paper](https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/patchmatch.pdf) and [Youtube](https://www.youtube.com/watch?v=m-kGXlomOxY&t=40s). PatchmatchNet made some changes to it and propose a deep learning way, details can be found in [PatchmatchNet paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_PatchmatchNet_Learned_Multi-View_Patchmatch_Stereo_CVPR_2021_paper.pdf) and [Github](https://github.com/FangjinhuaWang/PatchmatchNet), it requires the result from Sfm, which means the .bin files under the sparse folder if you are using COLMAP.
 
-The preprocess and the fusion part goes too slow under bigger dataset, so we use [mutiprocessing](https://pypi.org/project/multiprocessing/) to parallelize them. Details can be found in our code, and we will offer a docker image that runs the preprocessed dtu-1200-test dataset, it's also recommended to use our code for a quick validation, which may  cost within 20 mins with under 100 images, RTX3090 and 10 CPU cores.
+The preprocess and the fusion part goes too slow under bigger dataset, so we use [mutiprocessing](https://pypi.org/project/multiprocessing/) to parallelize them. Details can be found in our code, and we offer a docker image that runs the preprocessed dtu-1200-test dataset, it's also recommended to use our code for a quick validation, which may  cost within 20 mins with under 100 images, RTX3090 and 10 CPU cores.
+
+```shell
+docker run -i -t humorh/patchmatchnet /bin/bash
+```
+
+> **NOTICE**: this image has **NOT** been validated.
+
+If you are on a Linux machine with cuda and pytorch available, try the commands below, which may start a quick validation too.
+
+```shell
+git clone https://github.com/Huang-Shijie-SDUWH/Deep_MVS_Tutorial.git
+cd Deep_MVS_Tutorial/PatchmatchNet
+sh custom_para.sh
+```
+
+If anything goes wrong, check the packages or rise up a issue, we will be happy to answer your questions.
 
