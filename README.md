@@ -47,3 +47,6 @@ sh custom_para.sh
 
 If anything goes wrong, check the packages or rise a new issue, we will be happy to answer your questions.
 
+## Acknowledgements
+
+Thanks to FangjinhuaWang for opening source of [PatchmatchNet](https://github.com/FangjinhuaWang/PatchmatchNet).
