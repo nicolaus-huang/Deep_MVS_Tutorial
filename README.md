@@ -3,9 +3,11 @@
 
 First of all, let's get some basic knowledge of learning based MVS method. MVS ( Muti-View Stereo ) is a submission of computer version, which aims to turn images toward an object to an object ( in 3D format ). 
 
-The methods now divides into two part: traditional MVS method and learning based MVS method, you can learn about traditional MVS methods by read [Multi-View Stereo: A Tutorial (PDF) ](https://www.nowpublishers.com/article/DownloadSummary/CGV-052) , and you can find a list of recent learning based MVS method in [Awesome-Learning-MVS](https://github.com/XYZ-qiyh/Awesome-Learning-MVS) .
+The methods now divides into two areas: traditional MVS method and learning based MVS method, you can learn about traditional MVS methods by read [Multi-View Stereo: A Tutorial (PDF) ](https://www.nowpublishers.com/article/DownloadSummary/CGV-052) , and you can find a list of recent learning based MVS method in [Awesome-Learning-MVS](https://github.com/XYZ-qiyh/Awesome-Learning-MVS) .
 
 To turn some images into a point cloud, you need to know the where the cameras are and some information of the cameras, the progress is called Sfm ( Structure-from-Motion ) , you need to do this in almost all MVS method, but it's not important because mostly the task use a traditional method.
+
+![frame000080](https://s2.loli.net/2021/12/18/SEpOyKxMIbm8sAT.png)
 
 **The learning task is simple:** After getting the information of your cameras, the networks shows up, feed the information and images to them, and that comes out the disparity map, which refer to the truly depth of each pixel in the image.
 
@@ -25,7 +27,7 @@ Different to Mono-Depth Estimating task, the methods in MVS project focus on the
 
 ### PatchmatchNet
 
-PatchmatchNet is the only method that we made some changes to the code and it's easy to understand the pipeline, we would like to share some detail about this network. Patchmatch is a traditional method, you can learn more about it by view [paper](https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/patchmatch.pdf) and [Youtube](https://www.youtube.com/watch?v=m-kGXlomOxY&t=40s). PatchmatchNet made some changes to it and propose a deep learning way, details can be found in [paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_PatchmatchNet_Learned_Multi-View_Patchmatch_Stereo_CVPR_2021_paper.pdf) and [Github](https://github.com/FangjinhuaWang/PatchmatchNet), it requires the result from Sfm, which means the .bin files under the sparse folder if you are using COLMAP.
+PatchmatchNet is the only method that we made some changes to the code and it's easy to understand the pipeline, we would like to share some detail about this network. Patchmatch is a traditional method, you can learn more about it by view [Patchmatch paper](https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/patchmatch.pdf) and [Youtube](https://www.youtube.com/watch?v=m-kGXlomOxY&t=40s). PatchmatchNet made some changes to it and propose a deep learning way, details can be found in [PatchmatchNet paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_PatchmatchNet_Learned_Multi-View_Patchmatch_Stereo_CVPR_2021_paper.pdf) and [Github](https://github.com/FangjinhuaWang/PatchmatchNet), it requires the result from Sfm, which means the .bin files under the sparse folder if you are using COLMAP.
 
-The preprocess and the fusion part goes too slow under bigger dataset, so we use [mutiprocessing](https://pypi.org/project/multiprocessing/) to parallelize them. Details can be found in our code, and we will offer the docker image for a quick start.
+The preprocess and the fusion part goes too slow under bigger dataset, so we use [mutiprocessing](https://pypi.org/project/multiprocessing/) to parallelize them. Details can be found in our code, and we will offer a docker image that runs the preprocessed dtu-1200-test dataset, it's also recommended to use our code for a quick validation, which may  cost within 20 mins with under 100 images, RTX3090 and 10 CPU cores.
 
