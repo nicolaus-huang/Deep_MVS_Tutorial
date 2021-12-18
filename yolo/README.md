@@ -1,4 +1,20 @@
-论文:YOLOv3: An Incremental Improvement Joseph Redmon, Ali Farhadi
+论文参考:
+You Only Look Once:
+Unified, Real-Time Object Detection
+Joseph Redmon∗
+, Santosh Divvala∗†, Ross Girshick¶
+, Ali Farhadi∗†
+University of Washington∗
+, Allen Institute for AI†
+, Facebook AI Research
+
+YOLO9000:
+Better, Faster, Stronger
+Joseph Redmon∗†, Ali Farhadi∗†
+University of Washington∗
+, Allen Institute for AI†
+
+YOLOv3: An Incremental Improvement Joseph Redmon, Ali Farhadi
 
 源码参考:https://github.com/ultralytics/yolov3
 
