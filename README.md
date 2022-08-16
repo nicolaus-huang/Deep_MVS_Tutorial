@@ -47,11 +47,6 @@ sh custom_para.sh
 
 If anything goes wrong, check the packages or rise a new issue, we will be happy to answer your questions.
 
-### Results
-
-BaiduYunLink: https://pan.baidu.com/s/13F3b1Yd3ldrh760jslm7Nw 
-secret：3oa3 
-
 ## Acknowledgements
 
 Thanks to FangjinhuaWang for opening source of [PatchmatchNet](https://github.com/FangjinhuaWang/PatchmatchNet).
