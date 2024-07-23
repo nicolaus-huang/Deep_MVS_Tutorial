@@ -2,7 +2,7 @@
  A simple tutorial for beginners to learning based MVS. We were doing some homework towards reconstruction our campus, here we share some knowledge we learned in this work, further detail about our work can be found in [Bilibili](https://www.bilibili.com/video/BV1FZ4y1X7W6/) and [Youtube](https://youtu.be/fb3OotroDHc).
 
 Example Website:
-[SDU 3D Reconstruction Project](https://www.wukon.technology/)
+~[SDU 3D Reconstruction Project]()~ (no longer available)
 
 First of all, let's get some basic knowledge of learning based MVS method. MVS ( Muti-View Stereo ) is a submission of computer version, which aims to turn images toward an object to an object ( in 3D format ). 
 
